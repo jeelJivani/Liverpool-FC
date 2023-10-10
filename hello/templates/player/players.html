@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Players {% endblock title %}
+{% block body %}
+<div class="container mx-auto shadow-lg p-3 mt-4">
+<table class="table mt-5">
+    <form>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          name="search"
+          class="form-control"
+          placeholder="Serach Player"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn btn-outline-danger" type="submit" id="button-addon2">
+          Search
+        </button>
+      </div>
+    </form>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Player_id</th>
+        <th scope="col">Player_name</th>
+        <th scope="col">Player_position</th>
+        <th scope="col">Player_age</th>
+        <th scope="col">Player_country</th>
+        {% comment %} <th scop="col">Actions</th> {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+      {%for items in player%}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>  <a href="see_ratings/{{items.player_id}}">{{items.player_id}}</a></td>
+        <td>{{items.player_name}}</td>
+
+        <td>{{items.position}}</td>
+        <td>{{items.player_age}}</td>
+        <td>{{items.player_country}}</td>
+
+
+        {% comment %} <td>
+          <a href="/delete_blog/{{items.id}}/" class="btn btn-danger">Delete</a>
+          <a href="/update_blog/{{items.id}}/" class="btn btn-success mx-2"
+            >Update</a
+          >
+        </td> {% endcomment %}
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{% endblock body %}

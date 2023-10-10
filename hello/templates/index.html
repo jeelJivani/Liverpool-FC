@@ -1,0 +1,308 @@
+{% extends 'base.html' %} {% block title %}Home {% endblock title %} 
+{% block body %} {% comment %} carousel {% endcomment %}
+
+<div
+  id="carouselExampleInterval"
+  class="carousel slide"
+  data-ride="carousel"
+  style="height: 500px"
+>
+  <ol class="carousel-indicators">
+    <li
+      data-target="#carouselExampleIndicators"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" style="height: 500px">
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img
+        class="d-block w-100"
+        src="https://www.thisisanfield.com/wp-content/uploads/Salah-Trent-Diaz.jpg"
+        alt="First slide"
+      />
+    </div>
+    <div class="carousel-item" style="height: 500px" data-bs-interval="2000">
+      <img
+        class="d-block w-100"
+        src="https://i0.wp.com/footballfashion.org/wordpress/wp-content/uploads/2023/06/liverpool-fc-2023-2024-nike-away-kit-3.jpg?ssl=1"
+        alt="Second slide"
+      />
+    </div>
+    <div class="carousel-item" style="height: 500px">
+      <img
+        class="d-block w-100"
+        src="https://www.thisisanfield.com/wp-content/uploads/Salah-Trent-Diaz.jpg"
+        alt="Third slide"
+      />
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+{% comment %} Thumbnails {% endcomment %}
+
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <h1 class="text-center pb-5 text-danger">Shop Your Items</h1>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/klevu_images/500X625/l/u/luis_diaz-177.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/klevu_images/500X625/d/x/dx2733_1.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/klevu_images/500X625/d/a/darwin_nunez-191.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/klevu_images/500X625/d/x/dx2691-061_316719100_d_a_1x1.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/catalog/product/cache/b9092b51ecc4f763bcb6a21acb63c32f/d/a/darwin_nunez-199.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/catalog/product/cache/b9092b51ecc4f763bcb6a21acb63c32f/d/x/dx2732-460.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/catalog/product/cache/b9092b51ecc4f763bcb6a21acb63c32f/d/x/dx2765-061-phcfm001.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/catalog/product/cache/b9092b51ecc4f763bcb6a21acb63c32f/d/x/dx2817-101_330021146_d_a_1x1.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img
+            src="https://store.liverpoolfc.com/media/catalog/product/cache/b9092b51ecc4f763bcb6a21acb63c32f/l/u/luis_diaz-220.jpg"
+            alt="Home kit"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  View
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                  Edit
+                </button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

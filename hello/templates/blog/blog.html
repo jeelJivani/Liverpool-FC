@@ -1,0 +1,82 @@
+{% extends 'base.html' %} {% block title %}Blog {% endblock title %} 
+{% block body %}
+<div class="container mx-auto shadow-lg p-3 mt-4">
+  <form action="/blog" method="post" enctype="multipart/form-data ">
+    {% csrf_token %}
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">Blog Image</label>
+      <input
+        type="file"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        name="blog_image"
+        required
+      />
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputPassword1">Blog Name</label>
+      <input type="text" class="form-control" name="blog_name" required//>
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputPassword1">Blog decs</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Add content"
+        name="blog_desc"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-danger text-center">Submit</button>
+  </form>
+
+  {% comment %} data-table {% endcomment %}
+
+  <hr />
+  <table class="table mt-5">
+    <form>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          name="search"
+          class="form-control"
+          placeholder="Serach Blog"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn btn-outline-danger" type="submit" id="button-addon2">
+          Search
+        </button>
+      </div>
+    </form>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Blog_Image</th>
+        <th scope="col">Blog_name</th>
+        <th scope="col">Blog_desc</th>
+        <th scop="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for items in blog%}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td><img src="/image/{{items.blog_image}}" style="height: 110px" /></td>
+        <td>{{items.blog_name}}</td>
+        <td>{{items.blog_desc}}</td>
+        <td>
+          <a href="/delete_blog/{{items.id}}/" class="btn btn-danger">Delete</a>
+          <a href="/update_blog/{{items.id}}/" class="btn btn-success mx-2"
+            >Update</a
+          >
+        </td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
+
+{%endblock body%}

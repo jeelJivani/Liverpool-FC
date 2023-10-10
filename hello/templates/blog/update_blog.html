@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block title %}Blog {% endblock title %} 
+{% block body %}
+<div class="container mx-auto shadow-lg p-3 mt-4">
+  <form action="/blog" method="post" enctype="multipart/form-data ">
+    {% csrf_token %}        
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">Blog Image</label>
+      <input
+        type="file"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        name="blog_image"
+        value="{{blog.blog_image}}"
+        
+      />
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputPassword1">Blog Name</label>
+      <input type="text" class="form-control" name="blog_name"   value="{{blog.blog_name}}"/>
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputPassword1">Blog decs</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Add content"
+        name="blog_desc"
+        value="{{blog.blog_desc}}"
+        
+      />
+    </div>
+
+    <button type="submit" class="btn btn-danger text-center">Update</button>
+  </form>
+
+{% comment %} data-table {% endcomment %}
+
+
+
+
+{%endblock body%}
